@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Recursos/Add Window 2 - copia.ico</file>
+        <file>Recursos/anadir (1).png</file>
+        <file>Recursos/Back 2 - copia.ico</file>
+        <file>Examen_2P_JoelArias_en_US.qm</file>
+        <file>Examen_2P_JoelArias_es_EC.qm</file>
+    </qresource>
+</RCC>
