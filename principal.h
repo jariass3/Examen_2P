@@ -22,6 +22,8 @@ public slots:
 private slots:
     void on_cmdAnadir_clicked();
 
+    void on_actionFinalizar_triggered();
+
 private:
     Ui::Principal *ui;
     QList<Tarea *> m_tareas;

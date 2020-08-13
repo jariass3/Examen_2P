@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>913</width>
-    <height>355</height>
+    <width>722</width>
+    <height>385</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,28 +17,21 @@
    <iconset resource="Recursos.qrc">
     <normaloff>:/Recursos/Add Window 2 - copia.ico</normaloff>:/Recursos/Add Window 2 - copia.ico</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(170, 170, 255);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
      <widget class="QWidget" name="widget" native="true">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 247, 255);</string>
+      </property>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="1" colspan="2">
-        <widget class="QLineEdit" name="inTarea"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_3">
-         <property name="font">
-          <font>
-           <pointsize>14</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Tipo:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="inTipo">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
         </widget>
        </item>
@@ -46,9 +39,10 @@
         <widget class="QLabel" name="label">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <family>Ravie</family>
+           <pointsize>18</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
           </font>
          </property>
          <property name="text">
@@ -59,16 +53,14 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
-        <widget class="QDateEdit" name="inFecha"/>
-       </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_2">
          <property name="font">
           <font>
-           <pointsize>14</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <family>Ravie</family>
+           <pointsize>18</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
           </font>
          </property>
          <property name="text">
@@ -79,17 +71,43 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="1">
-        <widget class="QComboBox" name="inTipo"/>
+       <item row="1" column="1">
+        <widget class="QDateEdit" name="inFecha">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
        </item>
-       <item row="3" column="0" colspan="2">
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <family>Ravie</family>
+           <pointsize>14</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Tipo:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="3">
         <widget class="QGroupBox" name="groupBox_2">
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <family>Ravie</family>
+           <pointsize>18</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
          <property name="title">
           <string>Prioridad</string>
@@ -100,6 +118,13 @@
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
            <widget class="QRadioButton" name="inp_Alta">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
              <string>Alta</string>
             </property>
@@ -107,6 +132,13 @@
           </item>
           <item>
            <widget class="QRadioButton" name="inp_Media">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
              <string>Media</string>
             </property>
@@ -114,6 +146,13 @@
           </item>
           <item>
            <widget class="QRadioButton" name="inp_Baja">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
              <string>Baja</string>
             </property>
@@ -122,24 +161,42 @@
          </layout>
         </widget>
        </item>
+       <item row="0" column="1" colspan="2">
+        <widget class="QLineEdit" name="inTarea">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
-    <item row="0" column="1" rowspan="2">
+    <item row="0" column="1" rowspan="3">
      <widget class="QGroupBox" name="groupBox_3">
-      <property name="title">
-       <string>Tareas</string>
+      <property name="font">
+       <font>
+        <family>Ravie</family>
+        <pointsize>18</pointsize>
+       </font>
       </property>
-      <widget class="QTableWidget" name="outDetalle">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>421</width>
-         <height>261</height>
-        </rect>
-       </property>
-      </widget>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(207, 247, 255);</string>
+      </property>
+      <property name="title">
+       <string>Tabla de Tareas</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QTableWidget" name="outDetalle">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
     <item row="1" column="0">
@@ -153,7 +210,7 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(43, 255, 32);</string>
+       <string notr="true">background-color: rgb(255, 170, 255);</string>
       </property>
       <property name="text">
        <string>Añadir</string>
@@ -167,7 +224,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>913</width>
+     <width>722</width>
      <height>21</height>
     </rect>
    </property>
@@ -175,7 +232,7 @@
     <property name="title">
      <string>Archivo</string>
     </property>
-    <addaction name="actionNuevo"/>
+    <addaction name="actionFinalizar"/>
     <addaction name="actionSalir"/>
    </widget>
    <addaction name="menuArchivo"/>
@@ -185,13 +242,16 @@
    <property name="windowTitle">
     <string>toolBar</string>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionNuevo"/>
+   <addaction name="actionFinalizar"/>
    <addaction name="actionSalir"/>
   </widget>
   <action name="actionNuevo">
@@ -216,6 +276,18 @@
    </property>
    <property name="shortcut">
     <string>Esc</string>
+   </property>
+  </action>
+  <action name="actionFinalizar">
+   <property name="icon">
+    <iconset resource="Recursos.qrc">
+     <normaloff>:/Recursos/confirmar.png</normaloff>:/Recursos/confirmar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Finalizar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
    </property>
   </action>
  </widget>

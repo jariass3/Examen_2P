@@ -1,0 +1,3 @@
+" Tarea" ;" Fecha" ;" Tipo" ;" Prioridad" 
+" Trabajo completo" ;" ju. ago. 13 2020" ;" Universidad" ;" Prioridad Media" 
+" Desayunar en familia" ;" ma. ago. 25 2020" ;" Familiar" ;" Prioridad Baja" 

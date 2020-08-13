@@ -14,8 +14,8 @@ Principal::Principal(QWidget *parent)
 {
     ui->setupUi(this);
     connect(ui->cmdAnadir, SIGNAL(released()), this, SLOT(mostrarTarea()));
-    connect(ui->actionSalir, SIGNAL(triggered(bool)),
-               this, SLOT(close()));
+       connect(ui->actionSalir, SIGNAL(triggered(bool)),
+                  this, SLOT(close()));
     inicializarDatos();
 }
 
@@ -52,9 +52,11 @@ void Principal::mostrarTarea()
 
     if(ui->inp_Alta->isChecked()){
         prioridad = "Prioridad Alta";
-    }else if (ui->inp_Media->isChecked()){
+    }
+    if (ui->inp_Media->isChecked()){
         prioridad = "Prioridad Media";
-    }else{
+    }
+    if(ui->inp_Baja->isChecked()){
         prioridad = "Prioridad Baja";
     }
 
@@ -70,13 +72,32 @@ void Principal::mostrarTarea()
     ui->outDetalle->setItem(posicion,1,new QTableWidgetItem(fecha.toString()));
     ui->outDetalle->setItem(posicion,2,new QTableWidgetItem(p->tipo()));
     ui->outDetalle->setItem(posicion,3,new QTableWidgetItem(QString(prioridad)));
+
+    if(ui->inp_Alta->isChecked()){
+        for(int i=0;i<4;i++){
+            QColor col(Qt::red);
+            ui->outDetalle->item(posicion,i)->setBackgroundColor(col);
+        }
+    }
+    if (ui->inp_Media->isChecked()){
+        for(int i=0;i<4;i++){
+            QColor col1(Qt::yellow);
+            ui->outDetalle->item(posicion,i)->setBackgroundColor(col1);
+        }
+    }
+     if(ui->inp_Baja->isChecked()){
+         for(int i=0;i<4;i++){
+            QColor col2(Qt::green);
+            ui->outDetalle->item(posicion,i)->setBackgroundColor(col2);
+       }
+    }
 }
 
 
 
 void Principal::on_cmdAnadir_clicked()
 {
-    QString fileName=("E:\\Qt\\QtProyects\\Examen_2P_JoelArias\\Agregar_Tarea.csv");
+    QString fileName=("E:/Qt/QtProyects/examen_arias_joel/Examen_2P_JoelArias/Tareas.txt");
     QFile data(fileName);
     if(data.open(QFile::WriteOnly | QFile::Truncate))
     {
@@ -99,7 +120,17 @@ void Principal::on_cmdAnadir_clicked()
         }
         ui->statusbar->showMessage("Los Datos estan en: " + fileName,5060);
         data.close();
+
     }
+
+}
+
+
+
+void Principal::on_actionFinalizar_triggered()
+{
+       int e = ui->outDetalle->currentRow();
+       ui->outDetalle->removeRow(e);
 }
 
 
